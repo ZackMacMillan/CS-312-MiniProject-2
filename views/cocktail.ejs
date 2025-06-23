@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <div class="cocktail-box">
+    <div class="drink-card">
         <h2><%= beverage.strDrink %></h2>
         <img src="<%= beverage.strDrinkThumb %>" alt="Cocktail Image" class="drink-pic">
         
-        <h3>Whats in this Drink?</h3>
+        <h3>What's in this Drink?</h3>
         <ul>
             <% for (let n = 1; n <= 15; n++) { %>
                 <% if (beverage[`strIngredient${n}`]) { %>
@@ -24,7 +24,7 @@
         </ul>
 
         <p class="instructions"><%= beverage.strInstructions %></p>
-        <a href="/" class="back-btn">Going Back</a>
+        <a href="/" class="back-link">Going Back</a>
     </div>
 </body>
 </html>

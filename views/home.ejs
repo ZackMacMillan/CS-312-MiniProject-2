@@ -7,19 +7,21 @@
 </head>
 <body>
 
-    <h1>Welcome to MixMaster</h1>
-    <p>Search for a cocktail by name, or get a random one!</p>
+    <div class="wrapper">
+        <h1>Welcome to MixMaster</h1>
+        <p>Search up your favorite drink, or get a random one!</p>
 
-    <form action="/search" method="get">
-        <input type="text" name="cocktailName" placeholder="Enter cocktail name" required>
-        <button type="submit" class="fetch-btn">Search</button>
-    </form>
+        <form action="/search" method="get">
+            <input type="text" name="cocktailName" placeholder="Enter cocktail name" required>
+            <button type="submit" class="btn">Search</button>
+        </form>
 
-    <p>Or...</p>
+        <p>Or...</p>
 
-    <form action="/drink" method="get">
-        <button type="submit" class="fetch-btn">Get a Random Cocktail</button>
-    </form>
+        <form action="/drink" method="get">
+            <button type="submit" class="btn">Get a Random Cocktail</button>
+        </form>
+    </div>
 
 </body>
 </html>
