@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= beverage.strDrink %> | Mix It Up</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="cocktail-box">
+        <h2><%= beverage.strDrink %></h2>
+        <img src="<%= beverage.strDrinkThumb %>" alt="Cocktail Image" class="drink-pic">
+        
+        <h3>Whats in this Drink?</h3>
+        <ul>
+            <% for (let n = 1; n <= 15; n++) { %>
+                <% if (beverage[`strIngredient${n}`]) { %>
+                    <li><%= beverage[`strIngredient${n}`] %> 
+                    <% if (beverage[`strMeasure${n}`]) { %> 
+                        - <%= beverage[`strMeasure${n}`] %>
+                    <% } %>
+                    </li>
+                <% } %>
+            <% } %>
+        </ul>
+
+        <p class="instructions"><%= beverage.strInstructions %></p>
+        <a href="/" class="back-btn">Going Back</a>
+    </div>
+</body>
+</html>
